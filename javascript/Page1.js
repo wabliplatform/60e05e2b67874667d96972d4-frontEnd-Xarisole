@@ -75,4 +75,4 @@ document.getElementById('ihhls').onclick = (event) => {
         data: document.querySelector("[annotationname = 'projectImage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'projectImage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'projectImage']").src,
         name: document.querySelector("[annotationname = 'projectImage']").getAttribute("name")
       };
-      apiProjectApi.createproject( project, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); }});};window.onload = () => {};
+      apiProjectApi.createproject( project, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {  location.href= '/Page2/'+response.body.query._id+'' ;}}});};window.onload = () => {};
